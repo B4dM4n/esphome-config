@@ -4,13 +4,11 @@ packages:
   nous-a1-light_blue: !include ../light/nous-a1-light_blue.yaml
   nous-a1-light_red: !include ../light/nous-a1-light_red.yaml
   nous-a1-power: !include ../sensor/nous-a1-power.yaml
-  nous-a1-relay: !include ../switch/nous-a1-relay.yaml
+  nous-a1-relay-toggle-blink: !include ../switch/nous-a1-relay-toggle-blink.yaml
   nous-a1-vcc: !include ../sensor/nous-a1-vcc.yaml
 
   default-buttons: !include ../button/default.yaml
   default-sensors: !include ../sensor/default.yaml
-
-  relay-toggle-blink: !include ../switch/relay-toggle-blink.yaml
 
   api: !include ../api.yaml
   homeassistant_time: !include ../homeassistant_time.yaml
