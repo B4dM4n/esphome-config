@@ -1,0 +1,9 @@
+esphome:
+  name: $devicename
+  platform: ESP8266
+  board: esp8285
+  esp8266_restore_from_flash: true
+
+# Enable logging
+logger:
+  baud_rate: 0

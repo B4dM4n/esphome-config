@@ -1,0 +1,10 @@
+# Allow changeing the password
+# https://esphome.io/components/ota.html?highlight=ota#updating-the-password
+esphome:
+  on_boot:
+    - lambda: |-
+        id(ota_id).set_auth_password("$ota_password_new");
+
+ota:
+  password: $ota_password_current
+  id: ota_id

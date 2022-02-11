@@ -1,0 +1,10 @@
+light:
+  - platform: binary
+    output: led_red
+    id: light_red
+
+output:
+  - platform: gpio
+    pin: GPIO00
+    inverted: true
+    id: led_red

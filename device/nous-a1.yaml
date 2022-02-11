@@ -1,0 +1,20 @@
+packages:
+  nous-a1: !include ../device_base/nous-a1.yaml
+  nous-a1-button: !include ../sensor/nous-a1-button.yaml
+  nous-a1-light_blue: !include ../light/nous-a1-light_blue.yaml
+  nous-a1-light_red: !include ../light/nous-a1-light_red.yaml
+  nous-a1-power: !include ../sensor/nous-a1-power.yaml
+  nous-a1-relay: !include ../switch/nous-a1-relay.yaml
+  nous-a1-vcc: !include ../sensor/nous-a1-vcc.yaml
+
+  default-buttons: !include ../button/default.yaml
+  default-sensors: !include ../sensor/default.yaml
+
+  relay-toggle-blink: !include ../switch/relay-toggle-blink.yaml
+
+  api: !include ../api.yaml
+  homeassistant_time: !include ../homeassistant_time.yaml
+  ota: !include ../ota.yaml
+  web-server: !include ../web-server.yaml
+  wifi: !include ../wifi.yaml
+  wifi-fallback: !include ../wifi-fallback.yaml

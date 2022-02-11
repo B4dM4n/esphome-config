@@ -1,0 +1,15 @@
+text_sensor:
+  - platform: version
+    name: "${upper_devicename} - Version"
+    icon: mdi:cube-outline
+
+binary_sensor:
+  - platform: status
+    name: "${upper_devicename} - Status"
+    device_class: connectivity
+
+sensor:
+  - platform: uptime
+    name: "${upper_devicename} - Uptime"
+    update_interval: 60s
+    icon: mdi:clock-outline

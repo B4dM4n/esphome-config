@@ -1,0 +1,3 @@
+packages:
+  status: !include status.yaml
+  wifi-info: !include wifi-info.yaml

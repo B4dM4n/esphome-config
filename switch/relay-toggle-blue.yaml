@@ -1,0 +1,12 @@
+switch:
+  - platform: template
+    name: "${upper_devicename} - Switch"
+    icon: mdi:power
+    optimistic: true
+    id: button_switch
+    turn_on_action:
+      - switch.turn_on: relay
+      - light.turn_on: light_blue
+    turn_off_action:
+      - switch.turn_off: relay
+      - light.turn_off: light_blue

@@ -1,0 +1,7 @@
+# Conflicts with nous-a1-status_led
+light:
+  - platform: status_led
+    pin:
+      number: GPIO02
+      inverted: True
+    id: light_blue

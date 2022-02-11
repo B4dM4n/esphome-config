@@ -1,0 +1,8 @@
+substitutions:
+  timezone: Europe/Berlin
+
+# see: https://esphome.io/components/time.html
+time:
+  - platform: homeassistant
+    timezone: $timezone
+    id: homeassistant_time
