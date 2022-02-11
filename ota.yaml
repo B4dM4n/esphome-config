@@ -1,4 +1,8 @@
-# Allow changeing the password
+substitutions:
+  ota_password_current: ""
+  ota_password_new: $ota_password_current
+
+# Allow changing the password
 # https://esphome.io/components/ota.html?highlight=ota#updating-the-password
 esphome:
   on_boot:
