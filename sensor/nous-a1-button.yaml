@@ -5,5 +5,60 @@ binary_sensor:
       mode: INPUT_PULLUP
       inverted: True
     id: button_state
+
+    on_multi_click:
+      - timing:
+          - ON for at most 1s
+          - OFF for at most 0.35s
+          - ON for at most 1s
+          - OFF for at most 0.35s
+          - ON for at most 1s
+          - OFF for at least 0.35s
+        then:
+          - logger.log: "'button_state': Detected 'triple_click'"
+          - homeassistant.event:
+              event: esphome.button
+              data:
+                command: triple_click
+      - timing:
+          - ON for at most 1s
+          - OFF for at most 0.35s
+          - ON for at most 1s
+          - OFF for at least 0.35s
+        then:
+          - logger.log: "'button_state': Detected 'double_click'"
+          - homeassistant.event:
+              event: esphome.button
+              data:
+                command: double_click
+      - timing:
+          - ON for at least 1s
+          - OFF for at least 0.35s
+        then:
+          - logger.log: "'button_state': Detected 'long_click'"
+          - homeassistant.event:
+              event: esphome.button
+              data:
+                command: long_click
+      - timing:
+          - ON for at most 1s
+          - OFF for at least 0.35s
+        then:
+          - logger.log: "'button_state': Detected 'click'"
+          - switch.toggle: button_switch
+          #- homeassistant.event:
+          #    event: esphome.button
+          #    data:
+          #      command: click
+
     on_press:
-      - switch.toggle: button_switch
+      homeassistant.event:
+        event: esphome.button
+        data:
+          command: press
+
+    on_release:
+      homeassistant.event:
+        event: esphome.button
+        data:
+          command: release
