@@ -1,12 +1,12 @@
 sensor:
   - platform: total_daily_energy
-    name: "${upper_devicename} - Todays Usage"
+    name: "${upper_devicename} Energy Today"
     power_id: power_wattage
     filters:
       # Multiplication factor from W to kW is 0.001
       - multiply: 0.001
     unit_of_measurement: kWh
-    icon: mdi:calendar-clock
+    icon: mdi:lightning-bolt
 
   - platform: hlw8012
     sel_pin:
@@ -20,19 +20,19 @@ sensor:
     update_interval: 3s
 
     current:
-      name: "${upper_devicename} - Ampere"
+      name: "${upper_devicename} Current"
       unit_of_measurement: A
       accuracy_decimals: 3
       icon: mdi:current-ac
 
     voltage:
-      name: "${upper_devicename} - Volt"
+      name: "${upper_devicename} Voltage"
       unit_of_measurement: V
       accuracy_decimals: 1
-      icon: mdi:flash-outline
+      icon: mdi:current-ac
 
     power:
-      name: "${upper_devicename} - Watt"
+      name: "${upper_devicename} Power"
       unit_of_measurement: W
       id: power_wattage
-      icon: mdi:gauge
+      icon: mdi:flash

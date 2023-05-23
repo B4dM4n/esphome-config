@@ -1,22 +1,22 @@
 text_sensor:
   - platform: wifi_info
     ip_address:
-      name: "${upper_devicename} - IP Address"
+      name: "${upper_devicename} IP Address"
       icon: mdi:ip
       entity_category: diagnostic
     ssid:
-      name: "${upper_devicename} - SSID"
+      name: "${upper_devicename} SSID"
       entity_category: diagnostic
     bssid:
-      name: "${upper_devicename} - BSSID"
+      name: "${upper_devicename} BSSID"
       entity_category: diagnostic
     mac_address:
-      name: "${upper_devicename} - MAC Address"
+      name: "${upper_devicename} MAC Address"
       icon: mdi:expansion-card
       entity_category: diagnostic
 
 sensor:
   - platform: wifi_signal
-    name: "${upper_devicename} - Wifi Signal"
+    name: "${upper_devicename} Wifi Signal"
     update_interval: 60s
     icon: mdi:wifi

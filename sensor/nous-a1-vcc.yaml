@@ -1,6 +1,6 @@
 sensor:
   - platform: adc
     pin: VCC
-    name: "${upper_devicename} - VCC Volt"
-    icon: mdi:flash-outline
+    name: "${upper_devicename} VCC Voltage"
+    icon: mdi:current-dc
     entity_category: diagnostic
