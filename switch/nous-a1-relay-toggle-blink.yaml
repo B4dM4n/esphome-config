@@ -1,9 +1,8 @@
+packages:
+  nous-a1-relay: !include nous-a1-relay.yaml
+
 switch:
-  - platform: gpio
-    pin: GPIO15
-    name: "${upper_devicename} - Switch"
-    icon: mdi:power
-    id: button_switch
+  - id: !extend button_switch
     on_turn_on:
       - light.turn_on: light_red
       - delay: 750ms

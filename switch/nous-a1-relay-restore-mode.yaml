@@ -1,0 +1,6 @@
+substitutions:
+  restore_mode: RESTORE_DEFAULT_OFF
+
+switch:
+  - id: !extend button_switch
+    restore_mode: ${restore_mode}
