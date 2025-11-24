@@ -10,5 +10,6 @@ esphome:
         id(ota_id).set_auth_password("$ota_password_new");
 
 ota:
+  platform: esphome
   password: $ota_password_current
   id: ota_id
